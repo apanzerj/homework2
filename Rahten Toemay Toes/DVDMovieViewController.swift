@@ -8,11 +8,16 @@
 
 import UIKit
 
-class DVDMovieViewController: UIViewController {
+class DVDMovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var DVDTableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.DVDTableView.dataSource = self
+        self.DVDTableView.delegate = self
+        
 
         // Do any additional setup after loading the view.
     }
@@ -21,8 +26,7 @@ class DVDMovieViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
+    tableView
     /*
     // MARK: - Navigation
 
