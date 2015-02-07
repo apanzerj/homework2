@@ -17,18 +17,25 @@ class MovieListController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var turl = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?limit=30&country=us&apikey=atga3fvfzzwy697nhypzjs8y")
-        var request = NSURLRequest(URL: turl!)
-        var queue = NSOperationQueue.mainQueue()
-        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
-            self.movies = responseDictionary["movies"] as [NSDictionary]
-            self.movies = self.movies.sorted {
-                var rating_1 = $0.valueForKeyPath("ratings.critics_score") as Int
-                var rating_2 = $1.valueForKeyPath("ratings.critics_score") as Int
-                return rating_1 > rating_2
-            }
-            self.movieTableView.reloadData()
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), { () -> Void in
+            var turl = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?limit=30&country=us&apikey=atga3fvfzzwy697nhypzjs8y")
+            var request = NSURLRequest(URL: turl!)
+            var queue = NSOperationQueue.mainQueue()
+            NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+                var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
+                self.movies = responseDictionary["movies"] as [NSDictionary]
+                self.movies = self.movies.sorted {
+                    var rating_1 = $0.valueForKeyPath("ratings.critics_score") as Int
+                    var rating_2 = $1.valueForKeyPath("ratings.critics_score") as Int
+                    return rating_1 > rating_2
+                }
+                self.movieTableView.reloadData()
+            })
+            dispatch_async(dispatch_get_main_queue(), {
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                return
+            })
         })
         movieTableView.dataSource = self
         movieTableView.delegate = self
@@ -50,13 +57,12 @@ class MovieListController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = movieTableView.dequeueReusableCellWithIdentifier("MovieCell") as MovieCellTableViewCell
         var posterImageUrl = self.movies[indexPath.section].valueForKeyPath("posters.original") as String
-        posterImageUrl = posterImageUrl.stringByReplacingOccurrencesOfString("tmb", withString: "ori", options: nil, range: nil)
+        //posterImageUrl = posterImageUrl.stringByReplacingOccurrencesOfString("tmb", withString: "ori", options: nil, range: nil)
         cell.posterImage.setImageWithURL(NSURL(string: posterImageUrl))
 
         cell.Synopsis.text = self.movies[indexPath.section].valueForKeyPath("synopsis") as String!
         cell.criticsratingImage.image = UIImage(named: getImage("critics", section: indexPath.section))
         cell.audiencereviewImage.image = UIImage(named: getImage("audience", section: indexPath.section))
-        cell.layer.borderWidth = 2.0
         return cell
     }
 
@@ -74,6 +80,11 @@ class MovieListController: UIViewController, UITableViewDelegate, UITableViewDat
         header.movieTitleLabel.sizeToFit()
         return header
     }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
     /*
     // MARK: - Navigation
 
