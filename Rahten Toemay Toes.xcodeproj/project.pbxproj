@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37B2099848680AB35F857452 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1195ED3397023B2B97B9F9 /* libPods.a */; };
 		BAF489331A84685000B23C64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF489321A84685000B23C64 /* AppDelegate.swift */; };
-		BAF489351A84685000B23C64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF489341A84685000B23C64 /* ViewController.swift */; };
 		BAF489381A84685000B23C64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF489361A84685000B23C64 /* Main.storyboard */; };
 		BAF4893A1A84685000B23C64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF489391A84685000B23C64 /* Images.xcassets */; };
 		BAF4893D1A84685000B23C64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF4893B1A84685000B23C64 /* LaunchScreen.xib */; };
 		BAF489491A84685000B23C64 /* Rahten_Toemay_ToesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF489481A84685000B23C64 /* Rahten_Toemay_ToesTests.swift */; };
+		BAF489531A8468E300B23C64 /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF489521A8468E300B23C64 /* MovieListController.swift */; };
+		BAF489551A8469EA00B23C64 /* MovieHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF489541A8469EA00B23C64 /* MovieHeaderTableViewCell.swift */; };
+		BAF489571A846A2600B23C64 /* MovieCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF489561A846A2600B23C64 /* MovieCellTableViewCell.swift */; };
+		BAF7F5801A85DD8200603B76 /* Certified Fresh.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7F57A1A85DD8100603B76 /* Certified Fresh.png */; };
+		BAF7F5811A85DD8200603B76 /* Fresh.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7F57B1A85DD8100603B76 /* Fresh.png */; };
+		BAF7F5821A85DD8200603B76 /* Rotten.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7F57C1A85DD8100603B76 /* Rotten.png */; };
+		BAF7F5831A85DD8200603B76 /* Spilled.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7F57D1A85DD8200603B76 /* Spilled.png */; };
+		BAF7F5841A85DD8200603B76 /* Upright.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7F57E1A85DD8200603B76 /* Upright.png */; };
+		BAF7F5851A85DD8200603B76 /* wtsicon.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7F57F1A85DD8200603B76 /* wtsicon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +35,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F1195ED3397023B2B97B9F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF4892D1A84685000B23C64 /* Rahten Toemay Toes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rahten Toemay Toes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF489311A84685000B23C64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAF489321A84685000B23C64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAF489341A84685000B23C64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAF489371A84685000B23C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAF489391A84685000B23C64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BAF4893C1A84685000B23C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BAF489421A84685000B23C64 /* Rahten Toemay ToesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rahten Toemay ToesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF489471A84685000B23C64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAF489481A84685000B23C64 /* Rahten_Toemay_ToesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rahten_Toemay_ToesTests.swift; sourceTree = "<group>"; };
+		BAF489521A8468E300B23C64 /* MovieListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
+		BAF489541A8469EA00B23C64 /* MovieHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		BAF489561A846A2600B23C64 /* MovieCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCellTableViewCell.swift; sourceTree = "<group>"; };
+		BAF7F56B1A858B8500603B76 /* Rahten Toemay Toes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rahten Toemay Toes-Bridging-Header.h"; sourceTree = "<group>"; };
+		BAF7F57A1A85DD8100603B76 /* Certified Fresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Certified Fresh.png"; sourceTree = "<group>"; };
+		BAF7F57B1A85DD8100603B76 /* Fresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fresh.png; sourceTree = "<group>"; };
+		BAF7F57C1A85DD8100603B76 /* Rotten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rotten.png; sourceTree = "<group>"; };
+		BAF7F57D1A85DD8200603B76 /* Spilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spilled.png; sourceTree = "<group>"; };
+		BAF7F57E1A85DD8200603B76 /* Upright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Upright.png; sourceTree = "<group>"; };
+		BAF7F57F1A85DD8200603B76 /* wtsicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wtsicon.png; sourceTree = "<group>"; };
+		EC09E9DD70C4F8ED79601477 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1C5098407C4A1104679AAB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B2099848680AB35F857452 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A17922441BA0EDBF4014A84B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC09E9DD70C4F8ED79601477 /* Pods.debug.xcconfig */,
+				EF1C5098407C4A1104679AAB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BAF489241A84685000B23C64 = {
 			isa = PBXGroup;
 			children = (
 				BAF4892F1A84685000B23C64 /* Rahten Toemay Toes */,
 				BAF489451A84685000B23C64 /* Rahten Toemay ToesTests */,
 				BAF4892E1A84685000B23C64 /* Products */,
+				A17922441BA0EDBF4014A84B /* Pods */,
+				D94ED3E4841F8ADEA07B4AD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +110,21 @@
 		BAF4892F1A84685000B23C64 /* Rahten Toemay Toes */ = {
 			isa = PBXGroup;
 			children = (
+				BAF7F57A1A85DD8100603B76 /* Certified Fresh.png */,
+				BAF7F57B1A85DD8100603B76 /* Fresh.png */,
+				BAF7F57C1A85DD8100603B76 /* Rotten.png */,
+				BAF7F57D1A85DD8200603B76 /* Spilled.png */,
+				BAF7F57E1A85DD8200603B76 /* Upright.png */,
+				BAF7F57F1A85DD8200603B76 /* wtsicon.png */,
 				BAF489321A84685000B23C64 /* AppDelegate.swift */,
-				BAF489341A84685000B23C64 /* ViewController.swift */,
 				BAF489361A84685000B23C64 /* Main.storyboard */,
 				BAF489391A84685000B23C64 /* Images.xcassets */,
 				BAF4893B1A84685000B23C64 /* LaunchScreen.xib */,
 				BAF489301A84685000B23C64 /* Supporting Files */,
+				BAF489521A8468E300B23C64 /* MovieListController.swift */,
+				BAF489541A8469EA00B23C64 /* MovieHeaderTableViewCell.swift */,
+				BAF489561A846A2600B23C64 /* MovieCellTableViewCell.swift */,
+				BAF7F56B1A858B8500603B76 /* Rahten Toemay Toes-Bridging-Header.h */,
 			);
 			path = "Rahten Toemay Toes";
 			sourceTree = "<group>";
@@ -112,6 +154,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D94ED3E4841F8ADEA07B4AD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F1195ED3397023B2B97B9F9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAF4894C1A84685000B23C64 /* Build configuration list for PBXNativeTarget "Rahten Toemay Toes" */;
 			buildPhases = (
+				CF87C63771C785FF9CE33490 /* Check Pods Manifest.lock */,
 				BAF489291A84685000B23C64 /* Sources */,
 				BAF4892A1A84685000B23C64 /* Frameworks */,
 				BAF4892B1A84685000B23C64 /* Resources */,
+				C05D5B1082D20CDE50913115 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,9 +244,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF7F5831A85DD8200603B76 /* Spilled.png in Resources */,
+				BAF7F5841A85DD8200603B76 /* Upright.png in Resources */,
 				BAF489381A84685000B23C64 /* Main.storyboard in Resources */,
+				BAF7F5801A85DD8200603B76 /* Certified Fresh.png in Resources */,
 				BAF4893D1A84685000B23C64 /* LaunchScreen.xib in Resources */,
+				BAF7F5851A85DD8200603B76 /* wtsicon.png in Resources */,
+				BAF7F5821A85DD8200603B76 /* Rotten.png in Resources */,
 				BAF4893A1A84685000B23C64 /* Images.xcassets in Resources */,
+				BAF7F5811A85DD8200603B76 /* Fresh.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,12 +265,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C05D5B1082D20CDE50913115 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF87C63771C785FF9CE33490 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BAF489291A84685000B23C64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAF489351A84685000B23C64 /* ViewController.swift in Sources */,
+				BAF489531A8468E300B23C64 /* MovieListController.swift in Sources */,
+				BAF489551A8469EA00B23C64 /* MovieHeaderTableViewCell.swift in Sources */,
+				BAF489571A846A2600B23C64 /* MovieCellTableViewCell.swift in Sources */,
 				BAF489331A84685000B23C64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,21 +427,28 @@
 		};
 		BAF4894D1A84685000B23C64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC09E9DD70C4F8ED79601477 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Rahten Toemay Toes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rahten Toemay Toes/Rahten Toemay Toes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BAF4894E1A84685000B23C64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF1C5098407C4A1104679AAB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Rahten Toemay Toes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rahten Toemay Toes/Rahten Toemay Toes-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +505,7 @@
 				BAF4894E1A84685000B23C64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAF4894F1A84685000B23C64 /* Build configuration list for PBXNativeTarget "Rahten Toemay ToesTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +514,7 @@
 				BAF489511A84685000B23C64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
