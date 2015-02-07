@@ -8,13 +8,15 @@
 
 import UIKit
 
-class MovieListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MovieListController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
 
     @IBOutlet weak var movieTableView: UITableView!
     var movies: [NSDictionary]! = []
     var error: NSError!
     var descriptor: NSSortDescriptor = NSSortDescriptor(key: "ratings.critics_rating", ascending: true)
-
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        exit(0)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -23,14 +25,19 @@ class MovieListController: UIViewController, UITableViewDelegate, UITableViewDat
             var request = NSURLRequest(URL: turl!)
             var queue = NSOperationQueue.mainQueue()
             NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-                var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
-                self.movies = responseDictionary["movies"] as [NSDictionary]
-                self.movies = self.movies.sorted {
-                    var rating_1 = $0.valueForKeyPath("ratings.critics_score") as Int
-                    var rating_2 = $1.valueForKeyPath("ratings.critics_score") as Int
-                    return rating_1 > rating_2
+                if((error) != nil){
+                    var alert = UIAlertView(title: "No Network Connection", message: "Network not found.", delegate: self, cancelButtonTitle: "Goodbye")
+                    alert.show()
+                }else{
+                    var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
+                    self.movies = responseDictionary["movies"] as [NSDictionary]
+                    self.movies = self.movies.sorted {
+                        var rating_1 = $0.valueForKeyPath("ratings.critics_score") as Int
+                        var rating_2 = $1.valueForKeyPath("ratings.critics_score") as Int
+                        return rating_1 > rating_2
+                    }
+                    self.movieTableView.reloadData()
                 }
-                self.movieTableView.reloadData()
             })
             dispatch_async(dispatch_get_main_queue(), {
                 MBProgressHUD.hideHUDForView(self.view, animated: true)
@@ -46,7 +53,6 @@ class MovieListController: UIViewController, UITableViewDelegate, UITableViewDat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
