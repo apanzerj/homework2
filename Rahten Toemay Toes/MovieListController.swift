@@ -54,31 +54,26 @@ class MovieListController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.posterImage.setImageWithURL(NSURL(string: posterImageUrl))
 
         cell.Synopsis.text = self.movies[indexPath.section].valueForKeyPath("synopsis") as String!
-        cell.Synopsis.sizeToFit()
-        var ratingType = movies[indexPath.section].valueForKeyPath("ratings.critics_rating") as String!
+        cell.criticsratingImage.image = UIImage(named: getImage("critics", section: indexPath.section))
+        cell.audiencereviewImage.image = UIImage(named: getImage("audience", section: indexPath.section))
+        cell.layer.borderWidth = 2.0
+        return cell
+    }
+
+    func getImage(rating: NSString, section: Int) -> String{
+        var ratingType = movies[section].valueForKeyPath("ratings."+rating+"_rating") as String!
         if !contains(["Certified Fresh","Fresh","Rotten","Upright", "Spilled"], ratingType){
             ratingType = "wtsicon"
         }
-        cell.criticsratingImage.image = UIImage(named: ratingType+".png")
-        //cell.criticsratingImage.frame = CGRect(x: 105, y: 0, width: 40, height: 40)
-        return cell
+        return ratingType+".png"
     }
-    
+
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var header = movieTableView.dequeueReusableCellWithIdentifier("MovieHeader") as MovieHeaderTableViewCell
         header.movieTitleLabel.text = movies[section].valueForKeyPath("title") as String!
         header.movieTitleLabel.sizeToFit()
         return header
     }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 200
-    }
-    
     /*
     // MARK: - Navigation
 
