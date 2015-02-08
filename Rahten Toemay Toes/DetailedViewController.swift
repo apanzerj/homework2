@@ -9,27 +9,34 @@
 import UIKit
 
 class DetailedViewController: UIViewController {
+    @IBOutlet weak var navBar: UINavigationBar!
     
+    @IBAction func tapBack(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: {})
+    }
     @IBOutlet weak var synopsisLabel: UILabel!
     var movie: NSDictionary = NSDictionary()
 
-    @IBOutlet weak var viewScroll: UIScrollView!
-
     @IBOutlet weak var imageViewPoster: UIImageView!
     
+
+    func back(sender: AnyObject){
+        println("adsf")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         var posterImageUrl = movie.valueForKeyPath("posters.original") as String
         posterImageUrl = posterImageUrl.stringByReplacingOccurrencesOfString("tmb", withString: "ori", options: nil, range: nil)
         imageViewPoster.alpha = 0
         imageViewPoster.setImageWithURL(NSURL(string: posterImageUrl))
-        synopsisLabel.text = movie.valueForKeyPath("synopsis") as String
+        synopsisLabel.text = movie.valueForKeyPath("synopsis") as? String
         var y_value = synopsisLabel.frame.origin.y
         var bounds = UIScreen.mainScreen().bounds
         var w_value = bounds.width - 10 as CGFloat
         var h_value = 10 as CGFloat
         synopsisLabel.frame = CGRect(x: 5, y: y_value, width: w_value, height: h_value)
         synopsisLabel.backgroundColor = UIColor(white:0.80, alpha:1)
+
 
 
 

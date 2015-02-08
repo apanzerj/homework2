@@ -116,16 +116,23 @@ class MovieListController: UIViewController, UITableViewDelegate, UITableViewDat
         var posterImageUrl = self.movies[indexPath.section].valueForKeyPath("posters.original") as String
         cell.posterImage.setImageWithURL(NSURL(string: posterImageUrl))
         cell.posterImage.alpha = 0
-        posterImageUrl = posterImageUrl.stringByReplacingOccurrencesOfString("tmb", withString: "ori", options: nil, range: nil)
-        var url = NSURL(string: posterImageUrl)
-        var request = NSURLRequest(URL: url!)
-        cell.posterImage.setImageWithURLRequest(request, placeholderImage: cell.posterImage.image, success: { (request: NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
-            UIView.animateWithDuration(1.5, animations: { () -> Void in
-                cell.posterImage.image = image
-                cell.posterImage.alpha = 1
-            })
-            cell.posterImage.image = image
-        }, failure:nil)
+        UIView.animateWithDuration(1.5, animations: {() -> Void in
+            cell.posterImage.alpha = 1
+        })
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), { () -> Void in
+            posterImageUrl = posterImageUrl.stringByReplacingOccurrencesOfString("tmb", withString: "ori", options: nil, range: nil)
+            var url = NSURL(string: posterImageUrl)
+            var request = NSURLRequest(URL: url!)
+            cell.posterImage.setImageWithURLRequest(request, placeholderImage: cell.posterImage.image, success: { (request: NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
+                UIView.animateWithDuration(1.5, animations: { () -> Void in
+                    cell.posterImage.image = image
+                })
+            }, failure:nil)
+        })
+        dispatch_async(dispatch_get_main_queue(), {
+            return
+        })
 
         cell.Synopsis.text = self.movies[indexPath.section].valueForKeyPath("synopsis") as String!
         cell.criticsratingImage.image = UIImage(named: getImage("critics", section: indexPath.section))

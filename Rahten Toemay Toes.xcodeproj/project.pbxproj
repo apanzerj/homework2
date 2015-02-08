@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37B2099848680AB35F857452 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1195ED3397023B2B97B9F9 /* libPods.a */; };
+		BA3928ED1A87F78D00107FB2 /* DVDHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3928EC1A87F78D00107FB2 /* DVDHeaderTableViewCell.swift */; };
+		BA3928EF1A87FB6300107FB2 /* DVDCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3928EE1A87FB6300107FB2 /* DVDCellTableViewCell.swift */; };
 		BA9A2F7D1A86D9880096A28F /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A2F7C1A86D9880096A28F /* DetailedViewController.swift */; };
 		BAD13E571A867C0500A4408D /* DVDMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD13E561A867C0500A4408D /* DVDMovieViewController.swift */; };
 		BAD13E591A867DD600A4408D /* dvd.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD13E581A867DD600A4408D /* dvd.png */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		2F1195ED3397023B2B97B9F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3928EC1A87F78D00107FB2 /* DVDHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		BA3928EE1A87FB6300107FB2 /* DVDCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDCellTableViewCell.swift; sourceTree = "<group>"; };
 		BA9A2F7C1A86D9880096A28F /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		BAD13E561A867C0500A4408D /* DVDMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDMovieViewController.swift; sourceTree = "<group>"; };
 		BAD13E581A867DD600A4408D /* dvd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dvd.png; sourceTree = "<group>"; };
@@ -95,6 +99,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BA3928E81A87F18000107FB2 /* MovieControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAF489521A8468E300B23C64 /* MovieListController.swift */,
+				BAF489541A8469EA00B23C64 /* MovieHeaderTableViewCell.swift */,
+				BAF489561A846A2600B23C64 /* MovieCellTableViewCell.swift */,
+			);
+			name = MovieControllers;
+			sourceTree = "<group>";
+		};
+		BA3928EB1A87F1DD00107FB2 /* DVDControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAD13E561A867C0500A4408D /* DVDMovieViewController.swift */,
+				BA3928EC1A87F78D00107FB2 /* DVDHeaderTableViewCell.swift */,
+				BA3928EE1A87FB6300107FB2 /* DVDCellTableViewCell.swift */,
+			);
+			name = DVDControllers;
+			sourceTree = "<group>";
+		};
 		BA9A2F7B1A8691BA0096A28F /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,11 +163,9 @@
 				BAF489391A84685000B23C64 /* Images.xcassets */,
 				BAF4893B1A84685000B23C64 /* LaunchScreen.xib */,
 				BAF489301A84685000B23C64 /* Supporting Files */,
-				BAF489521A8468E300B23C64 /* MovieListController.swift */,
-				BAF489541A8469EA00B23C64 /* MovieHeaderTableViewCell.swift */,
-				BAF489561A846A2600B23C64 /* MovieCellTableViewCell.swift */,
+				BA3928E81A87F18000107FB2 /* MovieControllers */,
 				BAF7F56B1A858B8500603B76 /* Rahten Toemay Toes-Bridging-Header.h */,
-				BAD13E561A867C0500A4408D /* DVDMovieViewController.swift */,
+				BA3928EB1A87F1DD00107FB2 /* DVDControllers */,
 				BA9A2F7C1A86D9880096A28F /* DetailedViewController.swift */,
 			);
 			path = "Rahten Toemay Toes";
@@ -329,7 +351,9 @@
 				BAF489551A8469EA00B23C64 /* MovieHeaderTableViewCell.swift in Sources */,
 				BA9A2F7D1A86D9880096A28F /* DetailedViewController.swift in Sources */,
 				BAF489571A846A2600B23C64 /* MovieCellTableViewCell.swift in Sources */,
+				BA3928ED1A87F78D00107FB2 /* DVDHeaderTableViewCell.swift in Sources */,
 				BAD13E571A867C0500A4408D /* DVDMovieViewController.swift in Sources */,
+				BA3928EF1A87FB6300107FB2 /* DVDCellTableViewCell.swift in Sources */,
 				BAF489331A84685000B23C64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
