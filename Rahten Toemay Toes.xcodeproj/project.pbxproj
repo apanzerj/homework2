@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37B2099848680AB35F857452 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1195ED3397023B2B97B9F9 /* libPods.a */; };
+		BA9A2F7D1A86D9880096A28F /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A2F7C1A86D9880096A28F /* DetailedViewController.swift */; };
 		BAD13E571A867C0500A4408D /* DVDMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD13E561A867C0500A4408D /* DVDMovieViewController.swift */; };
 		BAD13E591A867DD600A4408D /* dvd.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD13E581A867DD600A4408D /* dvd.png */; };
 		BAD13E5B1A867ED200A4408D /* Movies.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD13E5A1A867ED200A4408D /* Movies.png */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		2F1195ED3397023B2B97B9F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9A2F7C1A86D9880096A28F /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		BAD13E561A867C0500A4408D /* DVDMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDMovieViewController.swift; sourceTree = "<group>"; };
 		BAD13E581A867DD600A4408D /* dvd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dvd.png; sourceTree = "<group>"; };
 		BAD13E5A1A867ED200A4408D /* Movies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Movies.png; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				BAF489561A846A2600B23C64 /* MovieCellTableViewCell.swift */,
 				BAF7F56B1A858B8500603B76 /* Rahten Toemay Toes-Bridging-Header.h */,
 				BAD13E561A867C0500A4408D /* DVDMovieViewController.swift */,
+				BA9A2F7C1A86D9880096A28F /* DetailedViewController.swift */,
 			);
 			path = "Rahten Toemay Toes";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			files = (
 				BAF489531A8468E300B23C64 /* MovieListController.swift in Sources */,
 				BAF489551A8469EA00B23C64 /* MovieHeaderTableViewCell.swift in Sources */,
+				BA9A2F7D1A86D9880096A28F /* DetailedViewController.swift in Sources */,
 				BAF489571A846A2600B23C64 /* MovieCellTableViewCell.swift in Sources */,
 				BAD13E571A867C0500A4408D /* DVDMovieViewController.swift in Sources */,
 				BAF489331A84685000B23C64 /* AppDelegate.swift in Sources */,

@@ -69,6 +69,7 @@
                                             <outlet property="audiencereviewImage" destination="xyy-Nz-SYX" id="Rnh-AF-mNW"/>
                                             <outlet property="criticsratingImage" destination="6M6-Cg-fuD" id="IhC-x3-5vO"/>
                                             <outlet property="posterImage" destination="PMW-b2-wqz" id="VjK-Hd-HAb"/>
+                                            <segue destination="29K-Nw-8PC" kind="modal" id="EKt-c3-3fG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -85,6 +86,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrP-Xk-aI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="674.5" y="390.5"/>
+        </scene>
+        <!--Detailed View Controller-->
+        <scene sceneID="uqF-lF-69h">
+            <objects>
+                <viewController id="29K-Nw-8PC" customClass="DetailedViewController" customModule="Rahten_Toemay_Toes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q2p-w6-Whq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qCK-DV-7AQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmq-ZL-f6R">
+                                <rect key="frame" x="8" y="184" width="359" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageViewPoster" destination="qCK-DV-7AQ" id="eEt-ac-Jp3"/>
+                        <outlet property="synopsisLabel" destination="gmq-ZL-f6R" id="xXZ-GC-sCl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Div-ei-LuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085.5" y="390.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Eub-Al-Zak">

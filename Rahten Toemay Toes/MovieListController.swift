@@ -144,14 +144,16 @@ class MovieListController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var vc = segue.destinationViewController as DetailedViewController
+        var idx = movieTableView.indexPathForCell(sender as UITableViewCell)
+        vc.movie = self.movies[idx!.section]
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

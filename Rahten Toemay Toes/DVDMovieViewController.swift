@@ -15,8 +15,8 @@ class DVDMovieViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.DVDTableView.dataSource = self
-        self.DVDTableView.delegate = self
+        DVDTableView.dataSource = self
+        DVDTableView.delegate = self
         
 
         // Do any additional setup after loading the view.
@@ -26,7 +26,17 @@ class DVDMovieViewController: UIViewController, UITableViewDelegate, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    tableView
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 10
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = UITableViewCell()
+        return cell
+    }
     /*
     // MARK: - Navigation
 
