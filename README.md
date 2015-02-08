@@ -25,7 +25,7 @@ Time spent: `45 hours`
 - [ ] Add a search bar: pretty simple implementation of searching against the existing table view data.
 
 ### Walkthrough
-![Video Walkthrough](https://www.dropbox.com/s/dkfg26hy54dr11l/rt.gif?dl=0)
+![Video Walkthrough](https://raw.githubusercontent.com/apanzerj/homework2/master/rt.gif)
 
 Credits
 ---------
