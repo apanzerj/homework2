@@ -17,7 +17,7 @@ Time spent: `45 hours`
 #### Optional
 
 - [x] All images fade in.
-- [ ] For the larger poster, load the low-res first and switch to high-res when complete.
+- [x] For the larger poster, load the low-res first and switch to high-res when complete. *Note: This happens better on the DVD page than the movie page*
 - [ ] All images should be cached in memory and disk: AppDelegate has an instance of `NSURLCache` and `NSURLRequest` makes a request with `NSURLRequestReturnCacheDataElseLoad` cache policy. I tested it by turning off wifi and restarting the app.
 - [ ] Customize the highlight and selection effect of the cell.
 - [ ] Customize the navigation bar.
@@ -25,7 +25,7 @@ Time spent: `45 hours`
 - [ ] Add a search bar: pretty simple implementation of searching against the existing table view data.
 
 ### Walkthrough
-![Video Walkthrough](http://i.imgur.com/9d4fXIm.gif)
+![Video Walkthrough](https://www.dropbox.com/s/dkfg26hy54dr11l/rt.gif?dl=0)
 
 Credits
 ---------
